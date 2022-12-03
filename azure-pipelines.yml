@@ -43,7 +43,7 @@ steps:
 - task: TwineAuthenticate@1
   inputs:
     artifactFeed: 'second-ado-project-agile/first_test_feed'
-    displayName: 'Twine authentication'
+  displayName: 'Twine authentication'
     
-- script: ''
+- script: 'python -m twine -upload -r first_test_feed dist/*.whl'
   displayName: 'Upload artifact'

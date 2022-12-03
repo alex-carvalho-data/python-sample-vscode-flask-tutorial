@@ -34,6 +34,9 @@ steps:
 - script: 'pip install wheel'
   displayName: 'wheel install'
 
+- script: 'python setup.py bdist_wheel'
+  displayName: 'build wheel'
+
 - script: 'pip install twine'
   displayName: 'twine installation'
   

@@ -10,8 +10,8 @@ pool:
   vmImage: ubuntu-latest
 strategy:
   matrix:
-    Python37:
-      python.version: '3.7'
+    Python38:
+      python.version: '3.8'
     Python39:
       python.version: '3.9'
 
@@ -31,9 +31,16 @@ steps:
     pytest
   displayName: 'pytest'
 
+- script: 'pip install wheel'
+  displayName: 'wheel install'
+
 - script: 'pip install twine'
   displayName: 'twine installation'
   
 - task: TwineAuthenticate@1
   inputs:
     artifactFeed: 'second-ado-project-agile/first_test_feed'
+    displayName: 'Twine authentication'
+    
+- script: ''
+  displayName: 'Upload artifact'

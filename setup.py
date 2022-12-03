@@ -10,7 +10,7 @@ setuptools.setup(
    long_description=long_description,
    long_description_content_type="text/markdown",
    url="https://github.com/alex-carvalho-data/python-sample-vscode-flask-tutorial",
-   packages=["python-vscode-flask"] or setuptools.find_packages(),
+   packages=["python-sample-vscode-flask-tutorial"] or setuptools.find_packages(),
    install_requires=["flask"],
    classifiers=[
       "Programming Language :: Python :: 3",

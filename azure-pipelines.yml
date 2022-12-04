@@ -48,5 +48,5 @@ steps:
     artifactFeed: 'second-ado-project-agile/first_test_feed'
   displayName: 'Twine authentication'
     
-- script: 'python -m twine upload -r first_test_feed --config-file $(PYPIRC_PATH) dist/*.whl'
+- script: 'python -m twine upload -r first_test_feed --verbose --config-file $(PYPIRC_PATH) dist/*.whl'
   displayName: 'Upload artifact'

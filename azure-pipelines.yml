@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 strategy:
   matrix:
-    Python37:
+    Python39:
       python.version: '3.9'
 
 steps:
@@ -29,5 +29,8 @@ steps:
     pytest
   displayName: 'pytest'
   
-- bash: 'echo $(ui_variable)'
+- bash: 'echo ui_variable: $(ui_variable)'
   displayName: 'display ui_variable'
+
+- bash: 'echo ui_secret_variable: $(ui_secret_variable)'
+  displayName: 'display ui_secret_variable'

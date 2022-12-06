@@ -34,3 +34,6 @@ steps:
 
 - bash: 'echo ui_secret_variable: $(ui_secret_variable)'
   displayName: 'display ui_secret_variable'
+
+- bash: 'echo ui_editable_variable: $(ui_editable_variable)'
+  displayName: 'display ui_editable_variable'

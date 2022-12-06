@@ -38,5 +38,5 @@ steps:
 - bash: 'echo ui_editable_variable: $(ui_editable_variable)'
   displayName: 'display ui_editable_variable'
 
-- bash: 'echo is default value: $[eq(variables["ui_secret_variable"], "dummy_secret")]'
+- bash: "echo is default value: $[eq(variables['ui_secret_variable'], 'dummy_secret')]"
   displayName: 'dummy_secret variable test'
